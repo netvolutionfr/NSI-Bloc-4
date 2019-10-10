@@ -33,6 +33,11 @@
              
             </form>
             
+            
+            <img src="Galak_cover.jpg">
+            
+             <br><br><img src="isen.png">
+            
         </div>
     </body>
 </html>

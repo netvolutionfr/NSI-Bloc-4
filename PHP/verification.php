@@ -35,12 +35,14 @@ if(isset($_POST['username']) && isset($_POST['password']))
         if($count!=0) // nom d'utilisateur et mot de passe correctes
         {
             //recuperation du droit de l'utilisateur 
-            $requete2 = "SELECT DRONOM FROM log,droit where droit.DROID=log.DROID and LOGIN = '".$username."' and PASSWORD = '".$password."' ";
+            $requete2 = "SELECT DRONOM, LOGID FROM log,droit where droit.DROID=log.DROID and LOGIN = '".$username."' and PASSWORD = '".$password."' ";
             $exec_requete2 = mysqli_query($db,$requete2);            
             $reponse2      = mysqli_fetch_array($exec_requete2);
             $droid = $reponse2['DRONOM'];
+            $logid = $reponse2['LOGID'];
             
-            //sauvegarde en session
+            //sauvegarde en session 
+           $_SESSION['logid'] = $logid;
            $_SESSION['droid'] = $droid;
            $_SESSION['connecte'] = 1;
            $_SESSION['username'] = $username;

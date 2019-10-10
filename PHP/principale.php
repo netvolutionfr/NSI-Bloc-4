@@ -21,6 +21,9 @@
           include("inc_menu.php"); 
             ?>
             
+            
+               <img src="Galak_cover.jpg">
+            
         </div>
     </body>
 </html>

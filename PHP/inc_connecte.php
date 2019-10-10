@@ -1,4 +1,5 @@
 ﻿            <!-- tester si l'utilisateur est connecté -->
+           
             <?php
                 session_start();
                 if($_SESSION['connecte'] !== 1)
@@ -26,4 +27,4 @@
                    }
                 }
             ?>
-         
+               <br><img src="isen.png">
